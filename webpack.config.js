@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const {HMR, NODE_ENV} = process.env;
 
 const port = process.env.port || 8080;
@@ -12,6 +13,14 @@ if (HMR) {
     new webpack.HotModuleReplacementPlugin(),
   ];
 }
+if (NODE_ENV === 'production') {
+  plugins = [
+    ...plugins,
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new UglifyJSPlugin(),
+  ];
+}
+
 let publicPath = 'https://johnetrent.github.io/resume/dist/';
 if (HMR) publicPath = `http://localhost:${port}/dist/`;
 
