@@ -12,7 +12,7 @@ if (HMR) {
     new webpack.HotModuleReplacementPlugin(),
   ];
 }
-let publicPath;
+let publicPath = 'https://johnetrent.github.io/resume/dist/';
 if (HMR) publicPath = `http://localhost:${port}/dist/`;
 
 module.exports = {
