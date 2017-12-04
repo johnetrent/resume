@@ -1,0 +1,11 @@
+{
+  "extends": ["eslint-config-jet"],
+  "rules": {
+    'no-magic-numbers': ['off', {
+      ignore: [],
+      ignoreArrayIndexes: true,
+      enforceConst: true,
+      detectObjects: false,
+    }],
+  }
+}
