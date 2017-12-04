@@ -11,6 +11,7 @@ import {GRAY, BLUE} from './styles/colors';
 import html2pdf from 'html2pdf.js';
 import ReactSVG from 'react-svg';
 import DownloadIcon from './icons/download.svg';
+import ReactGA from 'react-ga';
 import 'normalize.css';
 
 export default class Resume extends Component {
@@ -21,6 +22,10 @@ export default class Resume extends Component {
       image: {type: 'jpeg', quality: 0.98},
       html2canvas: {dpi: 192, letterRendering: true},
       jsPDF: {unit: 'in', format: 'letter', orientation: 'portrait'},
+    });
+    ReactGA.event({
+      category: 'User',
+      action: 'Downloaded Resume',
     });
   };
   render() {
