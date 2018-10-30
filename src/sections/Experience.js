@@ -6,10 +6,16 @@ import BriefcaseIcon from '../icons/briefcase.svg';
 export default function Experience() {
   return (
     <Section title="Experience" icon={BriefcaseIcon}>
+    <Job
+      title="Web Development Engineer II"
+      company="Amazon"
+      dates="2018 - Present"
+      description="Work on building feature-rich tables for displaying accounting data, along with a system visualization tool to display the flow of accounting data through FLASH's various accounting systems."
+    />
       <Job
         title="Senior Front End Developer"
         company="HZDG"
-        dates="2013 - Present"
+        dates="2013 - 2018"
         description="Responsible for the front end development of web and mobile applications. Notable clients include Volkswagen, the Washington Redskins, Organic Valley, and Rockefeller Center"
       />
       <Job
@@ -23,12 +29,6 @@ export default function Experience() {
         company="Willard Interactive"
         dates="2012 - 2013"
         description="Implemented CMS and eCommerce shopping carts across multiple platforms, including Wordpress, Shopify, ExpressionEngine and Bigcommerce"
-      />
-      <Job
-        title="Web Content Specialist"
-        company="Georgetown University"
-        dates="2010 - 2012"
-        description="Helped with the development and implementation of a new Content Management System and handled the front end development of multiple university websites"
       />
     </Section>
   );

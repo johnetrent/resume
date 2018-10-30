@@ -35,7 +35,7 @@ export default function Contact(props) {
         />
       )}
       {props.showLocation && (
-        <ContactInfo icon={MarkerIcon} text="Washington, D.C." />
+        <ContactInfo icon={MarkerIcon} text="Seattle, WA" />
       )}
     </Section>
   );
