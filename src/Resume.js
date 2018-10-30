@@ -49,7 +49,7 @@ export default class Resume extends Component {
         </div>
         <a
           className={css(styles.downloadButton)}
-          href="../Resume-John-Trent.pdf"
+          href="https://johnetrent.github.io/resume/Resume-John-Trent.pdf"
         >
           <ReactSVG path={DownloadIcon} className={css(styles.downloadIcon)} />
         </a>
