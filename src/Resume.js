@@ -47,12 +47,12 @@ export default class Resume extends Component {
             <Skills />
           </div>
         </div>
-        <button
+        <a
           className={css(styles.downloadButton)}
-          onClick={this.handleClick}
+          href="../Resume-John-Trent.pdf"
         >
           <ReactSVG path={DownloadIcon} className={css(styles.downloadIcon)} />
-        </button>
+        </a>
       </div>
     );
   }
@@ -116,6 +116,9 @@ const styles = StyleSheet.create({
     position: 'fixed',
     bottom: 15,
     right: 15,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
     width: 50,
     height: 50,
     borderWidth: 1,
